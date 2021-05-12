@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalChef">
-        <activity android:name=".ChefsRegActivity"></activity>
+        <activity android:name=".ClientsRegActivity"></activity>
+        <activity android:name=".ChefsRegActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
