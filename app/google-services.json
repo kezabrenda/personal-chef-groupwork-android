@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "543209280625",
+    "project_id": "personalchef-c3dc4",
+    "storage_bucket": "personalchef-c3dc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543209280625:android:4afc016b6dda2163d477d0",
+        "android_client_info": {
+          "package_name": "com.example.personalchef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543209280625-v8io0kln6c1vqk2ohcpjkqlsphpdng0h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyl3Mlg1ZRwQ3umsLp3Ubv7ArwW0H6Xk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543209280625-v8io0kln6c1vqk2ohcpjkqlsphpdng0h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
