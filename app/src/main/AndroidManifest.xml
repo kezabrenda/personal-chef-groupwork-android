@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalChef">
-        <activity android:name=".AdminSignInActivity"></activity>
+        <activity android:name=".AdminDashboardActivity"></activity>
+        <activity android:name=".ChefsLoginActivity" />
+        <activity android:name=".AdminSignInActivity" />
         <activity android:name=".ClientsRegActivity" />
         <activity android:name=".ChefsRegActivity" />
         <activity android:name=".MainActivity">
