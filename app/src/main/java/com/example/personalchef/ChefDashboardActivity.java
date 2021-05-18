@@ -9,12 +9,12 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class DashboardOneActivity extends AppCompatActivity {
+public class ChefDashboardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard_one);
+        setContentView(R.layout.activity_chef_dashboard);
 
         Button logout = findViewById(R.id.logoutBtn);
         logout.setOnClickListener(new View.OnClickListener() {

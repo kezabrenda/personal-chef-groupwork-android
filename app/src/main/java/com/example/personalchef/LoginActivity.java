@@ -83,11 +83,11 @@ public class LoginActivity extends AppCompatActivity {
                 //Identify user access level
                 if (documentSnapshot.getString("isAdmin") != null){
                     //user is admin
-                    startActivity(new Intent(getApplicationContext(), AdminActivity.class));
+                    startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
                     finish();
                 }
-                if (documentSnapshot.getString("isUser") != null){
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                if (documentSnapshot.getString("isChef") != null){
+                    startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
                     finish();
                 }
             }
@@ -108,8 +108,30 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), DashboardOneActivity.class));
-            finish();
+         DocumentReference documentReference = FirebaseFirestore.getInstance()
+                 .collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+             @Override
+             public void onSuccess(DocumentSnapshot documentSnapshot) {
+                 if (documentSnapshot.getString("isAdmin") != null){
+                     startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
+                     finish();
+                 }
+                 if (documentSnapshot.getString("isChef") != null){
+                     startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
+                     finish();
+                 }
+             }
+         })
+                 .addOnFailureListener(new OnFailureListener() {
+                     @Override
+                     public void onFailure(@NonNull Exception e) {
+                         FirebaseAuth.getInstance().signOut();
+                         startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                         finish();
+                     }
+                 });
         }
     }
 }

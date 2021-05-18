@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
     boolean valid = true;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
+    CheckBox isAdminBox, isChefBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,27 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn = findViewById(R.id.registerBtn);
         goToLogin = findViewById(R.id.gotoLogin);
 
+        isAdminBox = findViewById(R.id.isAdmin);
+        isChefBox = findViewById(R.id.isChef);
+
+        //checkboxes logic
+        isChefBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (compoundButton.isChecked()){
+                    isAdminBox.setChecked(false);
+                }
+            }
+        });
+
+        isAdminBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (compoundButton.isChecked()){
+                    isChefBox.setChecked(false);
+                }
+            }
+        });
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +75,11 @@ public class RegisterActivity extends AppCompatActivity {
                 checkField(email);
                 checkField(password);
                 checkField(phone);
+
+                if (!(isAdminBox.isChecked() || isChefBox.isChecked())) {
+                    Toast.makeText(RegisterActivity.this, "Select The Account Type", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if (valid) {
                     firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
@@ -66,11 +95,23 @@ public class RegisterActivity extends AppCompatActivity {
                                     userInfo.put("PhoneNumber", phone.getText().toString());
 
                                     //specify if the user is admin
-                                    userInfo.put("isUser", "1");
+                                    if (isAdminBox.isChecked()){
+                                        userInfo.put("isAdmin", "1");
+                                    }
+                                    if (isChefBox.isChecked()){
+                                        userInfo.put("isChef", "1");
+                                    }
                                     documentReference.set(userInfo);
 
-                                    startActivity(new Intent(getApplicationContext(), DashboardOneActivity.class));
-                                    finish();
+                                    if (isAdminBox.isChecked()) {
+                                        startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
+                                        finish();
+                                    }
+
+                                    if (isChefBox.isChecked()) {
+                                        startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
+                                        finish();
+                                    }
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
