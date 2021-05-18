@@ -29,11 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == mChefButton) {
-            Intent intent = new Intent(MainActivity.this, ChefsRegActivity.class);
-            startActivity(intent);
-        }
-        else if (v == mBookingButton) {
-            Intent intent = new Intent(MainActivity.this, ClientsRegActivity.class);
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
             startActivity(intent);
         }
     }
