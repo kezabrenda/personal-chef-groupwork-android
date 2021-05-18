@@ -64,11 +64,12 @@ public class RegisterActivity extends AppCompatActivity {
                                     userInfo.put("FullName", fullName.getText().toString());
                                     userInfo.put("UserEmail", email.getText().toString());
                                     userInfo.put("PhoneNumber", phone.getText().toString());
+
                                     //specify if the user is admin
                                     userInfo.put("isUser", "1");
                                     documentReference.set(userInfo);
 
-                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), DashboardOneActivity.class));
                                     finish();
                                 }
                             })
