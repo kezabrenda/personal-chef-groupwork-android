@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">personalChef</string>
+    <string name="action_settings">action_settings</string>
+    <string name="Home">\@string/Home</string>
+    <string name="signup">\@string/signup</string>
+    <string name="login">\@string/login</string>
 </resources>
