@@ -11,6 +11,9 @@
         android:theme="@style/Theme.PersonalChef">
         <activity android:name=".UserActivity" />
         <activity android:name=".UserdashboardActivity" />
+        <activity android:name=".ChefDashboardActivity"></activity>
+        <activity android:name=".AdminDashboardActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
