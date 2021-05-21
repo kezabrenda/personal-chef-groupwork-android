@@ -23,13 +23,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+
 public class RegisterActivity extends AppCompatActivity {
     EditText fullName,email,password,phone;
     Button registerBtn,goToLogin;
     boolean valid = true;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
-    CheckBox isAdminBox, isChefBox;
+    CheckBox isChefBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +48,10 @@ public class RegisterActivity extends AppCompatActivity {
         registerBtn = findViewById(R.id.registerBtn);
         goToLogin = findViewById(R.id.gotoLogin);
 
-        isAdminBox = findViewById(R.id.isAdmin);
+        Button isAdminBox = findViewById(R.id.isAdmin);
         isChefBox = findViewById(R.id.isChef);
 
-        //checkboxes logic
+        /*//checkboxes logic
         isChefBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -66,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                     isChefBox.setChecked(false);
                 }
             }
-        });
+        });*/
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,10 +78,10 @@ public class RegisterActivity extends AppCompatActivity {
                 checkField(password);
                 checkField(phone);
 
-                if (!(isAdminBox.isChecked() || isChefBox.isChecked())) {
+                /*if (!(isAdminBox.isChecked() || isChefBox.isChecked())) {
                     Toast.makeText(RegisterActivity.this, "Select The Account Type", Toast.LENGTH_SHORT).show();
                     return;
-                }
+                }*/
 
                 if (valid) {
                     firebaseAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
@@ -95,18 +97,10 @@ public class RegisterActivity extends AppCompatActivity {
                                     userInfo.put("PhoneNumber", phone.getText().toString());
 
                                     //specify if the user is admin
-                                    if (isAdminBox.isChecked()){
-                                        userInfo.put("isAdmin", "1");
-                                    }
                                     if (isChefBox.isChecked()){
                                         userInfo.put("isChef", "1");
                                     }
                                     documentReference.set(userInfo);
-
-                                    if (isAdminBox.isChecked()) {
-                                        startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
-                                        finish();
-                                    }
 
                                     if (isChefBox.isChecked()) {
                                         startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
@@ -126,6 +120,13 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         goToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            }
+        });
+
+        isAdminBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
