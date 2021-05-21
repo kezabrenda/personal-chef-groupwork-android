@@ -56,6 +56,14 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="1dp"
                     android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meals"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:layout_width="188dp"
@@ -84,6 +92,14 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="1dp"
                     android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ingredient"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -114,18 +130,26 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="1dp"
                     android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chefs"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/dashb2" />
+                        android:src="@drawable/personalc2" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/preparation"
+                android:id="@+id/recipes"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_rowWeight="1"
@@ -143,6 +167,14 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="1dp"
                     android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recipes"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
 
                     <ImageView
                         android:layout_width="wrap_content"

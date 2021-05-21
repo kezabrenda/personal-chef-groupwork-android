@@ -16,6 +16,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 public class UserdashboardActivity extends AppCompatActivity {
+    CardView meals,ingredient,chef,recipes;
     DrawerLayout drawerLayout;
     ViewFlipper fli;
 
@@ -29,9 +30,20 @@ public class UserdashboardActivity extends AppCompatActivity {
         int images[] = {R.drawable.pl1, R.drawable.personalc1, R.drawable.personalc2, R.drawable.personalc3, R.drawable.personalc4, R.drawable.personalc4};
         fli = findViewById(R.id.fli);
 
+        meals = findViewById(R.id.meals);
+        ingredient = findViewById(R.id.ingredient);
+        chef = findViewById(R.id.chef);
+        recipes = findViewById(R.id.recipes);
+
         for (int image : images) {
             flipperImages(image);
         }
+        meals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserdashboardActivity.this,UserActivity.class));
+            }
+        });
     }
 
     public void flipperImages(int image) {
