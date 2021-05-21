@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
 
         }else if(v == mBookingButton){
-            Intent intent = new Intent(MainActivity.this, UserActivity.class);
+            Intent intent = new Intent(MainActivity.this, UserdashboardActivity.class);
             startActivity(intent);
         }
     }
