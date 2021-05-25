@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".UserdashboardActivity">
+    tools:context=".UI.UserdashboardActivity">
     <RelativeLayout
         android:gravity="center"
         android:orientation="vertical"
