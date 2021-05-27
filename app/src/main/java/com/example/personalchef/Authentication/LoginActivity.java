@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.example.personalchef.Admin.AdminDashboardActivity;
 import com.example.personalchef.Chef.ChefDashboardActivity;
 import com.example.personalchef.R;
+import com.example.personalchef.UI.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -28,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     boolean valid = true;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +45,20 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.loginBtn);
         gotoRegister = findViewById(R.id.gotoRegister);
 
+        sharedPreferences = getSharedPreferences("SHARED_PREF", MODE_PRIVATE);
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkField(email);
                 checkField(password);
                 Log.d("TAG", "onclick:" + email.getText().toString());
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("EMAIL", String.valueOf(email));
+                editor.putString("PASS", String.valueOf(password));
+                editor.apply();
+                Toast.makeText(LoginActivity.this, "information saved!", Toast.LENGTH_SHORT).show();
 
                 if(valid) {
                     firebaseAuth.signInWithEmailAndPassword(email.getText().toString(),

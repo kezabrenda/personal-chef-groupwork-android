@@ -26,8 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="21dp"
-            android:text="Food Specialty"
-            />
+            android:text="Food Specialty" />
 
         <Button
             android:id="@+id/logoutBtn"
@@ -74,7 +73,7 @@
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/ic_message"
+            android:src="@drawable/ic_email"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="30dp"
             tools:layout_editor_absoluteY="399dp" />
@@ -83,7 +82,7 @@
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/ic_share"
+            android:src="@drawable/ic_edit"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="30dp"
             tools:layout_editor_absoluteY="461dp" />
@@ -134,7 +133,7 @@
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/ic_location"
+            android:src="@drawable/ic_person"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="30dp"
             tools:layout_editor_absoluteY="529dp" />
