@@ -12,7 +12,8 @@
         android:label="My Personal Chef"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PersonalChef">
+        android:theme="@style/Theme.PersonalChef"
+        android:usesCleartextTraffic="true">
         <activity android:name=".UI.UserActivity" />
         <activity android:name=".UI.UserdashboardActivity" />
         <activity android:name=".Chef.ChefDashboardActivity"></activity>
