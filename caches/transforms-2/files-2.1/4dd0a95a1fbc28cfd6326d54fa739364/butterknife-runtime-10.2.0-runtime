@@ -1,7 +1,0 @@
-butterknife.Action
-butterknife.Setter
-butterknife.Unbinder
-butterknife.ViewCollections
-butterknife.internal.DebouncingOnClickListener
-butterknife.internal.ImmutableList
-butterknife.internal.Utils
