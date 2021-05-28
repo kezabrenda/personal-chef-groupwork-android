@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mChefButton.setOnClickListener(this);
         mBookingButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
 
-        }else if(v == mBookingButton){
+        }else if(v == mBookingButton) {
             Intent intent = new Intent(MainActivity.this, UserdashboardActivity.class);
             startActivity(intent);
         }

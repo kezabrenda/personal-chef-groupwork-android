@@ -46,6 +46,12 @@ public class UserdashboardActivity extends AppCompatActivity {
                 startActivity(new Intent(UserdashboardActivity.this, UserActivity.class));
             }
         });
+        chef.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserdashboardActivity.this, ClientViewChefsDashboardActivity.class));
+            }
+        });
     }
 
     public void flipperImages(int image) {
