@@ -1,4 +1,4 @@
-package com.example.personalchef;
+package com.example.personalchef.Authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.personalchef.Chef.ChefDashboardActivity;
+import com.example.personalchef.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -22,8 +23,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import butterknife.BindView;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText fullName,email,password,phone;

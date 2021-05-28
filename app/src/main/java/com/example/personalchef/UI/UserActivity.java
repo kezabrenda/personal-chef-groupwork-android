@@ -1,4 +1,4 @@
-package com.example.personalchef;
+package com.example.personalchef.UI;
 
 import android.os.Bundle;
 import android.widget.ListAdapter;
@@ -6,6 +6,9 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.personalchef.Adapter.ListViewAdapter;
+import com.example.personalchef.R;
 
 import java.util.ArrayList;
 

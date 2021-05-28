@@ -1,4 +1,4 @@
-package com.example.personalchef;
+package com.example.personalchef.Admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,14 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.personalchef.Authentication.LoginActivity;
+import com.example.personalchef.R;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ChefDashboardActivity extends AppCompatActivity {
+public class AdminDashboardActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chef_dashboard);
+        setContentView(R.layout.activity_admin_dashboard);
 
         Button logout = findViewById(R.id.logoutBtn);
         logout.setOnClickListener(new View.OnClickListener() {
