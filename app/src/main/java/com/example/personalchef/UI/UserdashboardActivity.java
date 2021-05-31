@@ -33,9 +33,7 @@ public class UserdashboardActivity extends AppCompatActivity {
         fli = findViewById(R.id.fli);
 
         meals = findViewById(R.id.meals);
-        ingredient = findViewById(R.id.ingredient);
         chef = findViewById(R.id.chef);
-        recipes = findViewById(R.id.recipes);
 
         for (int image : images) {
             flipperImages(image);

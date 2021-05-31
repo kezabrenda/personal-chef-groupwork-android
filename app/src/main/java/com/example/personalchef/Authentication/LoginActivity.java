@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.loginEmail);
         password = findViewById(R.id.loginPassword);
         loginBtn = findViewById(R.id.loginBtn);
-        gotoRegister = findViewById(R.id.gotoRegister);
+        //gotoRegister = findViewById(R.id.gotoRegister);
 
         sharedPreferences = getSharedPreferences("SHARED_PREF", MODE_PRIVATE);
 
@@ -79,12 +79,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        gotoRegister.setOnClickListener(new View.OnClickListener() {
+        /*gotoRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), RegisterActivity.class));
             }
-        });
+        });*/
     }
 
     private void checkUserAccessLevel(String uid) {

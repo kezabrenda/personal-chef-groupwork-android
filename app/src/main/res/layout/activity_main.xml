@@ -32,7 +32,7 @@
         android:layout_marginBottom="61dp"
         android:background="@color/colorPrimaryDark"
         android:text="chef login"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
         android:visibility="visible" />
 
     <Button
@@ -46,7 +46,7 @@
         android:layout_marginBottom="61dp"
         android:background="@color/colorPrimaryDark"
         android:text="book a chef"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
         android:visibility="visible" />
 
 </RelativeLayout>
