@@ -11,9 +11,12 @@
         android:label="My Personal Chef"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PersonalChef"
+        android:theme="@style/Theme.PersonalChef1"
         android:usesCleartextTraffic="true">
-        <activity android:name=".booking.BookingActivity"></activity>
+        <activity android:name=".cuisines.ViewCuisinesActivity"></activity>
+        <activity android:name=".cuisines.SeeCuisinesActivity"></activity>
+        <activity android:name=".Chef.ChefDashboard2Activity" />
+        <activity android:name=".booking.BookingActivity" />
         <activity android:name=".UI.ViewChefsActivity" />
         <activity android:name=".UI.ClientViewChefsDashboardActivity" />
         <activity android:name=".UI.UserActivity" />

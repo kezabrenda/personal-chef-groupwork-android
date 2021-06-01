@@ -16,9 +16,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.personalchef.R;
+import com.example.personalchef.cuisines.SeeCuisinesActivity;
+import com.example.personalchef.cuisines.ViewCuisines;
+import com.example.personalchef.cuisines.ViewCuisinesActivity;
 
 public class UserdashboardActivity extends AppCompatActivity {
-    CardView meals,ingredient,chef,recipes;
+    CardView meals,chef;
     DrawerLayout drawerLayout;
     ViewFlipper fli;
 
@@ -41,7 +44,7 @@ public class UserdashboardActivity extends AppCompatActivity {
         meals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UserdashboardActivity.this, UserActivity.class));
+                startActivity(new Intent(UserdashboardActivity.this, SeeCuisinesActivity.class));
             }
         });
         chef.setOnClickListener(new View.OnClickListener() {
