@@ -12,5 +12,8 @@
     <string name="address">Address</string>
     <string name="email">Email</string>
     <string name="recipename">RecipeName</string>
+    <string name="meals">Meals</string>
+    <string name="nbrOfPpl">Number of People</string>
+    <string name="additionalInformation">Additional Information</string>
     <string name="ingredients">Ingredients</string>
 </resources>
