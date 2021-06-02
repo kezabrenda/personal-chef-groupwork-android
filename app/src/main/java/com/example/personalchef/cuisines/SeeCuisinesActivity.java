@@ -25,12 +25,12 @@ public class SeeCuisinesActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         String[] meals = {"African Cuisine", "Mediterranean Cuisine", "Asian Cuisine", "Other Cuisines"};
-        int[] imageId1 = {R.drawable.african_cuisines, R.drawable.mediterranean, R.drawable.asian_cuisine, R.drawable.othercuisines};
+        int[] imageId = {R.drawable.african_cuisines, R.drawable.mediterranean, R.drawable.asian_cuisine, R.drawable.othercuisines};
 
         ArrayList<ViewCuisines> viewCuisinesArrayList = new ArrayList<>();
 
-        for (int i = 0; i < imageId1.length; i++) {
-            ViewCuisines viewCuisinesActivity = new ViewCuisines(meals[i], imageId1[i]);
+        for (int i = 0; i < imageId.length; i++) {
+            ViewCuisines viewCuisinesActivity = new ViewCuisines(meals[i], imageId[i]);
             viewCuisinesArrayList.add(viewCuisinesActivity);
         }
 
@@ -43,7 +43,7 @@ public class SeeCuisinesActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(SeeCuisinesActivity.this, ViewCuisinesActivity.class);
                 intent.putExtra("meals", meals[position]);
-                intent.putExtra("imageId", imageId1[position]);
+                intent.putExtra("imageId", imageId[position]);
                 startActivity(intent);
             }
         });

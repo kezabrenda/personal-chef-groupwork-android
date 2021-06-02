@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ViewCuisines extends AppCompatActivity {
     public String meals, specialisedChef, viewDirections;
-    public int imageId1;
+    public int imageId;
 
-    public ViewCuisines(String meals, int imageId1) {
+    public ViewCuisines(String meals, int imageId) {
         this.meals = meals;
-        this.imageId1 = imageId1;
+        this.imageId = imageId;
     }
 }
