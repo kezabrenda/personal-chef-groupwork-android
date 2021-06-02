@@ -30,7 +30,7 @@
             android:layout_height="440dp"
             android:layout_below="@id/rel"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="91dp"
+            android:layout_marginTop="21dp"
             android:layout_marginEnd="0dp"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
