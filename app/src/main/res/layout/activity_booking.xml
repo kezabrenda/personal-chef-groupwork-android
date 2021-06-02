@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookingActivity">
-
-         <TextView
+    tools:context=".booking.BookingActivity">
+    <TextView
         android:id="@+id/booktitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +33,6 @@
             android:layout_marginRight="10dp"
             android:ems="10"
             android:hint="@string/first_name" />
-
 
         <EditText
             android:id="@+id/secondname"
@@ -108,7 +106,6 @@
             android:drawableRight="@drawable/ic_time"
             android:layout_below="@id/editTextEntryDate"/>
 
-
         <EditText
             android:id="@+id/editTextExitTime"
             android:layout_width="wrap_content"
@@ -142,6 +139,5 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 
 </RelativeLayout>

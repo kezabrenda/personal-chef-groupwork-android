@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".UI.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -24,29 +24,29 @@
 
     <Button
         android:id="@+id/chefButton"
-        android:layout_width="166dp"
-        android:layout_height="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginBottom="94dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="61dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Apply as Chef"
-        android:textColor="@color/colorPrimaryDark"
+        android:text="chef login"
+        android:textColor="@color/colorAccent"
         android:visibility="visible" />
 
     <Button
         android:id="@+id/bookingButton"
-        android:layout_width="139dp"
-        android:layout_height="37dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="95dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="61dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Continue as a User"
-        android:textColor="@color/colorPrimaryDark"
+        android:text="book a chef"
+        android:textColor="@color/colorAccent"
         android:visibility="visible" />
 
 </RelativeLayout>

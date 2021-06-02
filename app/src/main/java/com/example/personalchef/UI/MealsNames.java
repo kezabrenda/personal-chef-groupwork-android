@@ -1,4 +1,4 @@
-package com.example.personalchef;
+package com.example.personalchef.UI;
 
 public class MealsNames {
     private String mealsName;

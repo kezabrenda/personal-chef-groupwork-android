@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".UserdashboardActivity">
+    tools:context=".UI.UserdashboardActivity">
     <RelativeLayout
         android:gravity="center"
         android:orientation="vertical"
@@ -17,14 +17,12 @@
             android:id="@+id/rel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <ViewFlipper
                 android:id="@+id/fli"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_centerHorizontal="true"></ViewFlipper>
         </RelativeLayout>
-
         <GridLayout
             android:id="@+id/il"
             android:layout_width="match_parent"
@@ -36,11 +34,10 @@
             android:columnOrderPreserved="false"
             android:padding="14dp"
             android:rowCount="3">
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/meals"
                 android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_height="100dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginLeft="16dp"
@@ -49,7 +46,6 @@
                 android:background="@color/colorAccent"
                 app:cardCornerRadius="6dp"
                 app:cardElevation="8dp">
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -59,62 +55,23 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Meals"
+                        android:text="Cuisines"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:textSize="16dp"
                         android:textStyle="bold" />
-
-                    <ImageView
-                        android:layout_width="188dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/dashb1" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ingredient"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@color/colorAccent"
-                app:cardCornerRadius="6dp"
-                app:cardElevation="8dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="1dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ingredient"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
-
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/cardview_light_background"
                         android:src="@drawable/chef" />
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/chef"
                 android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_height="100dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_marginLeft="16dp"
@@ -125,11 +82,12 @@
                 app:cardElevation="8dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="216dp"
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="1dp"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -140,52 +98,13 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="192dp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/personalc2" />
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/recipes"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@color/colorAccent"
-                app:cardCornerRadius="6dp"
-                app:cardElevation="8dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="1dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Recipes"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/dashb3" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
         </GridLayout>
-
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -200,11 +119,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@android:color/white">
-
         <include
-
             layout="@layout/main_nav_drawer"/>
-
     </RelativeLayout>
-
 </androidx.drawerlayout.widget.DrawerLayout>

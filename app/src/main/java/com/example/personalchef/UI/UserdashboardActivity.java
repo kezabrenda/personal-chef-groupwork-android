@@ -1,4 +1,4 @@
-package com.example.personalchef;
+package com.example.personalchef.UI;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.personalchef.R;
 
 public class UserdashboardActivity extends AppCompatActivity {
     CardView meals,ingredient,chef,recipes;
@@ -31,9 +33,7 @@ public class UserdashboardActivity extends AppCompatActivity {
         fli = findViewById(R.id.fli);
 
         meals = findViewById(R.id.meals);
-        ingredient = findViewById(R.id.ingredient);
         chef = findViewById(R.id.chef);
-        recipes = findViewById(R.id.recipes);
 
         for (int image : images) {
             flipperImages(image);
@@ -41,7 +41,13 @@ public class UserdashboardActivity extends AppCompatActivity {
         meals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UserdashboardActivity.this,UserActivity.class));
+                startActivity(new Intent(UserdashboardActivity.this, UserActivity.class));
+            }
+        });
+        chef.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UserdashboardActivity.this, ClientViewChefsDashboardActivity.class));
             }
         });
         recipes.setOnClickListener(new View.OnClickListener() {
