@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.personalchef.R;
 import com.example.personalchef.booking.BookingActivity;
+import com.example.personalchef.booking.BookingActivity2;
 import com.example.personalchef.databinding.ActivityViewChefsBinding;
 
 public class ViewChefsActivity extends AppCompatActivity {
@@ -39,7 +40,7 @@ public class ViewChefsActivity extends AppCompatActivity {
         bookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), BookingActivity.class));
+                startActivity(new Intent(getApplicationContext(), BookingActivity2.class));
             }
         });
     }
