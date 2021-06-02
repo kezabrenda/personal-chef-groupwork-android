@@ -17,7 +17,7 @@
             android:paddingTop="15dp">
 
         <ImageView
-            android:id="@+id/cuisinesImage2"
+            android:id="@+id/cuisineImage2"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginStart="20dp"

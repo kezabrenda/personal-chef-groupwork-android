@@ -36,7 +36,7 @@ public class CuisinesListViewAdapter extends ArrayAdapter<ViewCuisines> {
         TextView meals = convertView.findViewById(R.id.cuisineType);
 
         meals.setText(viewCuisinesActivity.meals);
-        /*imageView.setImageResource(viewCuisinesActivity.imageId1);*/
+        imageView.setImageResource(viewCuisinesActivity.imageId);
 
         return convertView;
     }
