@@ -1,6 +1,7 @@
 package com.example.personalchef.booking;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -40,8 +41,23 @@ public class BookingActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendSMS();
+                showDetails();
             }
         });
+    }
+
+    public void showDetails() {
+        String username = firstName.getText().toString();
+        String userSurname = secondName.getText().toString();
+        String meal = meals.getText().toString();
+        String addInform = addInfo.getText().toString();
+
+        Intent intent = new Intent(BookingActivity2.this, ConfirmActivity.class);
+        intent.putExtra("firstName", username);
+        intent.putExtra("secondName", userSurname);
+        intent.putExtra("meals", meal);
+        intent.putExtra("addInfo", addInform);
+        startActivity(intent);
     }
 
     public void sendSMS(){
