@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".booking.BookingActivity" >
+    tools:context=".booking.BookingActivity"
+    android:id="@+id/mess">
 
     <TextView
         android:id="@+id/booktitle"
@@ -160,8 +161,6 @@
         android:hint="@string/additionalInformation"
         android:inputType="text"
         />
->>>>>>> 102837a765369723a7bdb95a45123cb1d7d95c34
-
     <Button
         android:id="@+id/bookingButton"
         android:layout_width="293dp"
