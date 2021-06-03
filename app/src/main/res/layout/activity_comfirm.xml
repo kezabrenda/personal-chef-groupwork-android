@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context=".booking.ConfirmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:id="@+id/linear_toolbar1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="381dp"
+            android:layout_height="47dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="BOOKING DETAILS"
+            android:textColor="@color/colorAccent"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/linear_toolbar1"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="5dp"
+                android:text="First Name: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="5dp"
+                android:text="Second Name: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/secondName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="5dp"
+                android:text="Chef: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/chefNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="5dp"
+                android:text="Meal: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/meals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="5dp"
+                android:text="Additional Information: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/addInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Done" />
+
+    </LinearLayout>
+
+</RelativeLayout>

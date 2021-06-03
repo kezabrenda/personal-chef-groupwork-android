@@ -25,7 +25,7 @@ public class ClientViewChefsDashboardActivity extends AppCompatActivity {
         int[] imageId = {R.drawable.chef001, R.drawable.chef002, R.drawable.chef003};
         String[] chefNames = {"Charity Mutoni", "Clema Ingabire", "Fred Mura"};
         String[] chefSpeciality = {"Mediterranean Cuisine", "American Cuisine", "American Cuisine"};
-        String[] hourlyRate = {"10,000 Rwf per hour", "20,000 Rwf per hour", "15,000 Rwf per hour"};
+        String[] hourlyRate = {"1000 Rwf per hour", "2000 Rwf per hour", "1500 Rwf per hour"};
 
         ArrayList<ViewChefs> viewChefsArrayList = new ArrayList<>();
 
