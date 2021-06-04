@@ -61,7 +61,14 @@ public class BookingActivity2 extends AppCompatActivity {
     }
 
     public void sendSMS(){
-        String message = firstName.getText().toString();
+        String message0 = firstName.getText().toString();
+        String message1 = secondName.getText().toString();
+        String message2 = meals.getText().toString();
+        String message3 = addInfo.getText().toString();
+        String message4 = address.getText().toString();
+        String message = "You have been booked by " +message0 + " " + message1 + " to make "
+                +message2 + " at " +message4 + " P.S. " +message3;
+
         String number = phone.getText().toString();
 
         SmsManager mySmsManager = SmsManager.getDefault();
