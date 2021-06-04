@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.personalchef">
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -19,8 +20,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalChef1"
         android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
         <activity android:name=".booking.ConfirmActivity" />
         <activity android:name=".cuisines.ViewCuisinesActivity" />
+        <activity android:name=".AfricanMeals.RecipeActivity"/>
+        <activity android:name=".AfricanMeals.RecipeMAinActivity"/>
         <activity android:name=".cuisines.SeeCuisinesActivity" />
         <activity android:name=".Chef.ChefDashboard2Activity" />
         <activity android:name=".booking.BookingActivity" />

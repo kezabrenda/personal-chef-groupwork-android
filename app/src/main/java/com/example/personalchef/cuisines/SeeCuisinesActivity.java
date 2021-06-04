@@ -2,13 +2,16 @@ package com.example.personalchef.cuisines;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.personalchef.Adapter.CuisinesListViewAdapter;
 
+import com.example.personalchef.AfricanMeals.RecipeMAinActivity;
 import com.example.personalchef.R;
 import com.example.personalchef.UI.ViewChefs;
 import com.example.personalchef.databinding.ActivityCuisinesListBinding;
@@ -41,12 +44,28 @@ public class SeeCuisinesActivity extends AppCompatActivity {
         binding.listview2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(SeeCuisinesActivity.this, ViewCuisinesActivity.class);
-                intent.putExtra("meals", meals[position]);
-                intent.putExtra("imageId", imageId[position]);
-                startActivity(intent);
+                Handler objHandler = new Handler();
+                objHandler.post(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        // TODO Auto-generated method stub
+                        Toast.makeText(getBaseContext(), "You can view different meals here", Toast.LENGTH_LONG).show();
+                    }
+
+                    {
+                        if (position == 0) {
+                            Intent intent = new Intent(SeeCuisinesActivity.this, RecipeMAinActivity.class);
+                            startActivity(intent);
+                        }
+
+                        Intent intent = new Intent(SeeCuisinesActivity.this, ViewCuisinesActivity.class);
+                        intent.putExtra("meals", meals[position]);
+                        intent.putExtra("imageId", imageId[position]);
+                        startActivity(intent);
+                    }
+                });
             }
         });
-
     }
 }
