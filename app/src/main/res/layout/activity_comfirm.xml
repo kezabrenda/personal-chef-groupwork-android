@@ -48,7 +48,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/secondName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/chefNames"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/meals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/addInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.personalchef.R;
 import com.example.personalchef.booking.BookingActivity;
 import com.example.personalchef.booking.BookingActivity2;
+import com.example.personalchef.booking.ConfirmActivity;
 import com.example.personalchef.databinding.ActivityViewChefsBinding;
 
 public class ViewChefsActivity extends AppCompatActivity {
@@ -24,15 +25,18 @@ public class ViewChefsActivity extends AppCompatActivity {
 
         Intent intent = this.getIntent();
 
+
         if (intent != null) {
             String chefNames = intent.getStringExtra("name");
             String chefSpeciality = intent.getStringExtra("specialty");
             String hourlyRate = intent.getStringExtra("hourlyRate");
+            String chefPhone = intent.getStringExtra("phone");
             int imageId = intent.getIntExtra("imageId", R.drawable.chef002);
 
             binding.chefNames.setText(chefNames);
             binding.chefSpecialty.setText(chefSpeciality);
             binding.hourlyRate.setText(hourlyRate);
+            binding.phone.setText(chefPhone);
             binding.chefImage1.setImageResource(imageId);
         }
         bookButton = findViewById(R.id.bookButton);
@@ -43,5 +47,7 @@ public class ViewChefsActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), BookingActivity2.class));
             }
         });
+
     }
+
 }

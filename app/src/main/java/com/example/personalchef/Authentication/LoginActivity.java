@@ -76,6 +76,8 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             });
                 }
+
+
             }
         });
 
@@ -134,10 +136,10 @@ public class LoginActivity extends AppCompatActivity {
          documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
              @Override
              public void onSuccess(DocumentSnapshot documentSnapshot) {
-                 if (documentSnapshot.getString("isAdmin") != null){
+                 /*if (documentSnapshot.getString("isAdmin") != null){
                      startActivity(new Intent(getApplicationContext(), AdminDashboardActivity.class));
                      finish();
-                 }
+                 }*/
                  if (documentSnapshot.getString("isChef") != null){
                      startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
                      finish();
