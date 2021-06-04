@@ -1,12 +1,17 @@
 package com.example.personalchef.cuisines;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.personalchef.AfricanMeals.RecipeMAinActivity;
+import com.example.personalchef.Authentication.LoginActivity;
 import com.example.personalchef.R;
+import com.example.personalchef.UI.MainActivity;
 import com.example.personalchef.booking.BookingActivity;
 import com.example.personalchef.databinding.ActivityViewChefsBinding;
 import com.example.personalchef.databinding.ActivityViewCuisinesBinding;
@@ -19,16 +24,13 @@ public class ViewCuisinesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityViewCuisinesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         Intent intent = this.getIntent();
 
         if (intent != null) {
             String meals = intent.getStringExtra("meals");
             int imageId = intent.getIntExtra("imageId", R.drawable.african_cuisines);
-
             binding.meals.setText(meals);
             binding.cuisineImage2.setImageResource(imageId);
         }
-
     }
 }
