@@ -69,9 +69,10 @@ public class BookingActivity2 extends AppCompatActivity {
         String message = "You have been booked by " +message0 + " " + message1 + " to make "
                 +message2 + " at " +message4 + " P.S. " +message3;
 
-        String number = phone.getText().toString();
+        /*String chefNumber = getIntent().getStringExtra("Cphone");
+        System.out.println(chefNumber);*/
 
         SmsManager mySmsManager = SmsManager.getDefault();
-        mySmsManager.sendTextMessage(number,null, message, null, null);
+        mySmsManager.sendTextMessage("0788519073",null, message, null, null);
     }
 }

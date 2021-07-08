@@ -2,15 +2,17 @@ package com.example.personalchef.AfricanMeals;
 
 public class Recipes {
     private String RecipeName;
+    private String RecipeChef;
     private String RecipeIngredients;
     private String RecipeMethodTitle;
     private String Recipe;
     private int Thumbnail;
 
 
-    public Recipes(String name, String recipeIngredients, String recipeMethodTitle,String recipe, int thumbnail){
+    public Recipes(String name,String chef, String recipeIngredients, String recipeMethodTitle,String recipe, int thumbnail){
 
         RecipeName = name;
+        RecipeChef= chef;
         RecipeIngredients = recipeIngredients;
         RecipeMethodTitle = recipeMethodTitle;
         Recipe = recipe;
@@ -23,6 +25,7 @@ public class Recipes {
 
         return RecipeName;
     }
+    public String getRecipeChef() { return RecipeChef;}
     public String getRecipeIngredients(){
         return RecipeIngredients;
     }

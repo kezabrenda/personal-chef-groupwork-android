@@ -22,9 +22,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/recipename"
+                android:textColor="@color/colorPrimary"
                 android:textSize="21sp"
                 android:textStyle="bold"
                 />
+            <TextView
+                android:id="@+id/recipe_chef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/specialised_chef"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"/>
+
             <TextView
                 android:id="@+id/ingredients"
                 android:layout_width="wrap_content"
@@ -54,13 +64,6 @@
                 android:text="@string/ingredients"
 
                 />
-
-
-
         </LinearLayout>
-
-
     </androidx.core.widget.NestedScrollView>
-
-
 </LinearLayout>

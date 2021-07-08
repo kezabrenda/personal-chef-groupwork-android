@@ -17,4 +17,8 @@
     <string name="additionalInformation">Additional Information</string>
     <string name="ingredients">Ingredients</string>
     <string name="african_meals">African Meals</string>
+    <string name="specialised_chef">Specialized Chef</string>
+
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
 </resources>

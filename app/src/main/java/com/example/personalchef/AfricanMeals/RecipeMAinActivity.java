@@ -23,7 +23,21 @@ public class RecipeMAinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recipe_main);
 
         recipes1 = new ArrayList<>();
-        recipes1.add(new Recipes("Chicken Roll","200 gm chopped into cubes chicken" +
+        recipes1.add(new Recipes("Nyama na irio","Chef: Not Available Now",
+                "Potato masher, "+"Potato masher, "+"Potato masher, "+"Salt, "+"2 cups of corn, " +
+                        "1+1/2cups of corn, "+"Water, ","Direction","This dish originated from " +
+                "the Kikuyu people. This popular African food has several variations, " +
+                "especially in the ingredients used. However, peas, corn, " +
+                "and potatoes are essential ingredients. " + "" +
+                "Nyama na irio is usually served with grilled steak. It’s a tasty Kenyan dish"+"" +
+                "Put the potatoes and peas in a large saucepan and pour enough water. Make sure the water covers the potatoes.\n" +
+                "Add two teaspoon of salt and put the stove in medium heat\n" +
+                "Let it boil, then reduce the heat and allow it to simmer until the potatoes have cooked well and are soft.\n" +
+                "Drain the water into a plate or small bowl\n" +
+                "Put the smaller saucepan on the fire and pour the corn in it. Add a little salt, then leave it to simmer for some minutes.\n" +
+                "Use the potato masher to mash the peas and potatoes together.\n" +
+                "Now pour the mashed potatoes and peas into the corn. A little of the reserved water should be added to it and stir for a while. Now add salt and pepper to your taste.",R.drawable.nyama));
+        recipes1.add(new Recipes("Chicken Roll","Chef: Not Available Now","200 gm chopped into cubes chicken" +
                 "1 medium chopped tomato" +
                 "1/2 pinch red chilli powder" +
                 "2 tablespoon vegetable oil" +
@@ -37,7 +51,7 @@ public class RecipeMAinActivity extends AppCompatActivity {
                 "1 tablespoon green chilli sauce","Method",
                 "Chicken Roll is a delectable North Indian recipe made using all purpose flour, stir-fried chicken, yoghurt and a variety of vegetables rolled into paranthas. On days you do not want to prepare an elaborate meal, this delectable dish can be a saviour. Rolls are quite popular across India and they are often a favourite evening snack. Egg Roll, Kathi Kebab Roll, Mutton Roll, Paneer Roll, Potato Roll and even Fish Roll are among its many variations. This easy roll recipe is made using chicken and has the unforgettable aroma of Indian spices. You can also utilize your leftover parathas and chapatis in making this recipe. If you do not like to use all-purpose flour or maida, you can make it with whole wheat flour too. In fact, it can be made even with leftover chicken. All you have to ensure is that you use the right amount of spices so that the flavour is not lost. Easy to pack and carry, you can also take it to office or prepare it for picnics and day trips. A must try roll recipe for all chicken lovers!\n",R.drawable.chicken_roll));
 
-        recipes1.add(new Recipes("Donut","1 c. whole milk" +
+        recipes1.add(new Recipes("Donut","Chef: Not Available Now","1 c. whole milk" +
                 "1/4 c. plus 1 tsp. granulated sugar, divided" +
                 "1 packet (or 2 1/4 tsp.) active dry yeast " +
                 "4 c. all-purpose flour, plus more if needed" +
@@ -50,7 +64,7 @@ public class RecipeMAinActivity extends AppCompatActivity {
                 "Make glaze: In a large bowl, whisk together milk, powdered sugar, and vanilla until smooth. Set aside.\n" +
                 "Line a large baking sheet with paper towels. In a large dutch oven over medium heat, heat 2'' oil to 350°. Cook doughnuts, in batches, until deeply golden on both sides, about 1 minute per side. Holes will cook even faster!\n" +
                 "Transfer doughnuts to paper towel-lined baking sheet to drain and cool slightly. Dip into glaze, then place onto a cooling rack (or eat immediately!)",R.drawable.donut1));
-        recipes1.add(new Recipes("Dosa","3 cups rice" +
+        recipes1.add(new Recipes("Dosa","Chef: Not Available Now","3 cups rice" +
                 "1 cup urad daal (split, skinless black gram)" +
                 "3/4 teaspoon fenugreek seeds" +
                 "Salt (to taste)" +
@@ -59,7 +73,7 @@ public class RecipeMAinActivity extends AppCompatActivity {
                         "Put some cooking oil in a small bowl and keep ready. You will also need a bowl of ice cold water, a large, flat nonstick pan, 2 sheets of paper towel, a ladle, a spatula, and a basting brush.\n" +
                         "When the upper surface begins to look cooked (it will no longer look soft or runny), flip the dosa. By this time, ideally, the surface that was underneath should be light golden in color. Cook for 1 minute after flipping.\n" +
                         "The dosa is almost done. Fold it in half and allow to cook for 30 seconds more.",R.drawable.dosa1));
-        recipes1.add(new Recipes("Pancake","1 1/4 cups milk" +
+        recipes1.add(new Recipes("Pancake","Chef: Not Available Now","1 1/4 cups milk" +
                 "1 egg" +
                 "3 tablespoons butter melted" +
                 "1 1/2 cups all-purpose flour" +
@@ -68,7 +82,7 @@ public class RecipeMAinActivity extends AppCompatActivity {
                 "1 tablespoon white sugar","Method",
                 "In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth." +
                         "Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.",R.drawable.pancakes));
-        recipes1.add(new Recipes("Pasta","1 tsp oil" +
+        recipes1.add(new Recipes("Pasta","Chef: Not Available Now","1 tsp oil" +
                 "1 tsp butter" +
                 "2 clove garlic, finely chopped" +
                 "1 inch ginger, finely chopped" +
@@ -93,15 +107,13 @@ public class RecipeMAinActivity extends AppCompatActivity {
 
 
 
-        myrecyclerView = (RecyclerView)findViewById(R.id.recyclerView_id);
+        myrecyclerView = findViewById(R.id.recyclerView_id);
 
         myAdapter = new RecyclerViewAdapter(this,recipes1);
 
         myrecyclerView.setLayoutManager(new GridLayoutManager(this,1));
 
         myrecyclerView.setAdapter(myAdapter);
-
-
 
     }
 

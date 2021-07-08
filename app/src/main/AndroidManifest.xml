@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <dist:module dist:instant="true" />
 
     <application
@@ -20,12 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalChef1"
         android:usesCleartextTraffic="true">
-        android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        <activity android:name=".Chef.ChefCalendarActivity"></activity>
         <activity android:name=".booking.ConfirmActivity" />
         <activity android:name=".cuisines.ViewCuisinesActivity" />
-        <activity android:name=".AfricanMeals.RecipeActivity"/>
-        <activity android:name=".AfricanMeals.RecipeMAinActivity"/>
+        <activity android:name=".AfricanMeals.RecipeActivity" />
+        <activity android:name=".AfricanMeals.RecipeMAinActivity" />
         <activity android:name=".cuisines.SeeCuisinesActivity" />
         <activity android:name=".Chef.ChefDashboard2Activity" />
         <activity android:name=".booking.BookingActivity" />
@@ -35,7 +35,7 @@
         <activity android:name=".UI.ClientViewChefsDashboardActivity" />
         <activity android:name=".UI.UserActivity" />
         <activity android:name=".UI.UserdashboardActivity" />
-        <activity android:name=".Chef.ChefDashboardActivity" />
+        <activity android:name=".Chef.ChefViewProfileActivity" />
         <activity android:name=".Admin.AdminDashboardActivity" />
         <activity android:name=".Authentication.LoginActivity" />
         <activity android:name=".Authentication.RegisterActivity" />

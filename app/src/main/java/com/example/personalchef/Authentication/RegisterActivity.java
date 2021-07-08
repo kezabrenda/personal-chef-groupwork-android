@@ -11,7 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.personalchef.Chef.ChefDashboardActivity;
+import com.example.personalchef.Chef.ChefViewProfileActivity;
 import com.example.personalchef.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -102,7 +102,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     documentReference.set(userInfo);
 
                                     if (isChefBox.isChecked()) {
-                                        startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
+                                        startActivity(new Intent(getApplicationContext(), ChefViewProfileActivity.class));
                                         finish();
                                     }
                                 }
