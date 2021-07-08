@@ -13,9 +13,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.personalchef.Admin.AdminDashboardActivity;
-import com.example.personalchef.Chef.ChefDashboardActivity;
+import com.example.personalchef.Chef.ChefDashboard2Activity;
 import com.example.personalchef.R;
-import com.example.personalchef.UI.MainActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -103,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                     finish();
                 }
                 if (documentSnapshot.getString("isChef") != null){
-                    startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
+                    startActivity(new Intent(getApplicationContext(), ChefDashboard2Activity.class));
                     finish();
                 }
             }
@@ -141,7 +140,7 @@ public class LoginActivity extends AppCompatActivity {
                      finish();
                  }*/
                  if (documentSnapshot.getString("isChef") != null){
-                     startActivity(new Intent(getApplicationContext(), ChefDashboardActivity.class));
+                     startActivity(new Intent(getApplicationContext(), ChefDashboard2Activity.class));
                      finish();
                  }
              }

@@ -8,9 +8,12 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.example.personalchef.Adapter.ViewChefsListViewAdapter;
+import com.example.personalchef.Constants;
 import com.example.personalchef.R;
 import com.example.personalchef.booking.BookingActivity2;
 import com.example.personalchef.databinding.ActivityClientViewChefsDashboardBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -24,7 +27,7 @@ public class ClientViewChefsDashboardActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         int[] imageId = {R.drawable.chef001, R.drawable.chef002, R.drawable.chef003};
-        String[] chefNames = {"Charity Mutoni", "Clema Ingabire", "Fred Mura"};
+        String[] chefNames = {"Donna", "Ada Byron", "Harvey"};
         String[] chefSpeciality = {"Mediterranean Cuisine", "American Cuisine", "American Cuisine"};
         String[] hourlyRate = {"1000 Rwf per hour", "2000 Rwf per hour", "1500 Rwf per hour"};
         String[] phone = { "0788932754", "5559873622", "25789094782"};
@@ -50,15 +53,7 @@ public class ClientViewChefsDashboardActivity extends AppCompatActivity {
                 intent.putExtra("imageId", imageId[position]);
                 intent.putExtra("phone", phone[position]);
                 startActivity(intent);
-
-                /*if (phone != null) {
-                    Intent intent2 = new Intent(ClientViewChefsDashboardActivity.this, BookingActivity2.class);
-                    intent2.putExtra("phone", phone[position]);
-                    startActivity(intent2);
-                }*/
             }
         });
-
     }
-
 }
